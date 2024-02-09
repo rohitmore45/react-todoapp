@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import css from "./TodoItem1.module.css";
 import { MdDelete } from "react-icons/md";
+import { TodoItemsContext } from "../store/todo-item-store";
 
-export default function TodoItem1({ todoName, todoDate, onDeleteClick }) {
+export default function TodoItem1({ todoName, todoDate }) {
+  const { deleteItem } = useContext(TodoItemsContext);
   return (
     <div className="container">
       <div className={` row ${css["kg-row"]}`}>
@@ -10,9 +13,9 @@ export default function TodoItem1({ todoName, todoDate, onDeleteClick }) {
         <div className="col-2">
           <button
             className={`btn btn-danger ${css["button-class"]}`}
-            onClick={() => onDeleteClick(todoName)}
+            onClick={() => deleteItem(todoName)}
           >
-            <MdDelete /> 
+            <MdDelete />
           </button>
         </div>
       </div>
