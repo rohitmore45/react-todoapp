@@ -26,8 +26,6 @@ function AddTodo() {
             placeholder="Enter Todo here..."
             className={css["input-class"]}
             ref={todoNameElement}
-            // value={todoName}
-            // onChange={handleNameChange}
           />
         </div>
         <div className="col-4">
@@ -35,8 +33,6 @@ function AddTodo() {
             type="date"
             className={css["input-class"]}
             ref={dueDateElement}
-            // value={dueDate}
-            // onChange={handleDateChange}
           />
         </div>
         <div className="col-2">

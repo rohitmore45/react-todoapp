@@ -7,7 +7,7 @@ export default function WelcomeMsg() {
   const todoItems = contextObj.todoItems;
   return (
     todoItems.length === 0 && (
-      <p className={styles.welcome}>Enjoy Your Day...</p>
+      <p className={styles.welcome}>No Todo's, Enjoy Your Day...</p>
     )
   );
 }
